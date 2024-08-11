@@ -11,7 +11,7 @@ function Articles() {
     const [error, setError] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(10);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState(localStorage.getItem('searchQuery') || '');
 
     useEffect(() => {
         const loadArticles = async () => {
@@ -25,15 +25,17 @@ function Articles() {
         }
     }
        loadArticles();
+       if (localStorage.getItem('searchQuery')) {
+        setSearchQuery(localStorage.getItem('searchQuery'));
+    }
     }, [])
 
     const handleChange = (e) => {
         setSearchQuery(e.target.value)
+        localStorage.setItem('searchQuery', e.target.value);
       }
       const filteredArticles = articles.filter(article =>
-        (article.title?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false) ||
-        (article.author?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false) ||
-        (article.description?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false)
+        (article.title.toLowerCase().includes(searchQuery.toLowerCase()) ?? "[Removed]")
     );
 
     const totalMatchingItems = filteredArticles.length;
@@ -75,23 +77,26 @@ function Articles() {
                 name='search'
                 value={searchQuery}
                 onChange={handleChange}
-                placeholder='Search articles...'
+                placeholder='Search article titles...'
             />
         </div>
     </div>
-    {filteredArticles.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((article, index) => (
-        !article.title.includes('[Removed]') && article.urlToImage !== null && article.source.id !== null?
-    <div key={index} className='articleWrapper'>
-        <article className='article'>
-            <h1 className='title'><strong>Title:</strong> {article.title}</h1>
-            <img className='articleImage'src={article.urlToImage} alt={article.title}/>
-            <h2 className='articleDescription'><strong>Description:</strong> {article.description}</h2>
-            <h3 className='date'><strong>Published:</strong> {moment(article.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</h3>
-            <Link to={`/posting/${article.source.id}`} className='moreDetails'>...More Details</Link>
-        </article> 
-        </div> : null
-    
-    ))}
+    {filteredArticles.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((article, index) => {
+    if (!article.title.includes('[Removed]') && article.urlToImage !== null) {
+        return (
+            <div key={index} className='articleWrapper'>
+                <article className='article'>
+                    <h1 className='title'><strong>Title:</strong> {article.title}</h1>
+                    <img className='articleImage' src={article.urlToImage} alt={article.title} />
+                    <h2 className='articleDescription'><strong>Description:</strong> {article.description}</h2>
+                    <h3 className='date'><strong>Published:</strong> {moment(article.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</h3>
+                    <Link to={`/article/${article.title}`} className='moreDetails'>...read more</Link>
+                </article> 
+            </div>
+        );
+    }
+    return null; // Return null for articles to be excluded
+})}
     {totalMatchingItems > 0 && totalMatchingItems === 1? (
     <p className='displayingPages'> {`${totalMatchingItems}`} match.</p>
 ) : totalMatchingItems > 1 ? (
