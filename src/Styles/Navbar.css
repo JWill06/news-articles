@@ -1,0 +1,48 @@
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.navWrapper h1,
+.navWrapper h2,
+.navWrapper h3 {
+    color: white;
+}
+
+.navWrapper h1 {
+    animation: fromLeft 5s linear forwards;
+}
+
+.navWrapper h2,
+.navWrapper h3 {
+    animation: fromRight 5s linear forwards;
+}
+
+.navWrapper h2 {
+    font-size: 35px;
+}
+
+.navWrapper h1,
+.navWrapper h3 {
+    font-size: 20px;
+}
+
+@keyframes fromLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+}
