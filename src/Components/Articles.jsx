@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import '../Styles/Articles.css'
 import FetchNews from '../ApiCall'
-import Select from 'react-select'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 
@@ -86,7 +85,7 @@ function Articles() {
         return (
             <div key={index} className='articleWrapper'>
                 <article className='article'>
-                    <h1 className='title'><strong>Title:</strong> {article.title}</h1>
+                    <h1 className='title'>{article.title}</h1>
                     <img className='articleImage' src={article.urlToImage} alt={article.title} />
                     <h2 className='articleDescription'><strong>Description:</strong> {article.description}</h2>
                     <h3 className='date'><strong>Published:</strong> {moment(article.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</h3>
@@ -95,7 +94,7 @@ function Articles() {
             </div>
         );
     }
-    return null; // Return null for articles to be excluded
+    return null; 
 })}
     {totalMatchingItems > 0 && totalMatchingItems === 1? (
     <p className='displayingPages'> {`${totalMatchingItems}`} match.</p>
