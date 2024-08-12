@@ -3,6 +3,9 @@
 ## Abstract 
 News Articles is a news article application that has recent and up to date articles about Apple. This application displays mutliple articles and allows the user to search for specific titles. Once the user finds an article they can click on 'read more' and be taken to a separate page to see more information about the article. Once the user is on the details page they can also click on the 'source' button and be taken to the original source of the article. 
 
+## Deployed Site
+[Deployed Link Here](https://news-articles-topaz.vercel.app/)
+
 ## Preview
 ![news-articles](https://github.com/user-attachments/assets/3a6dd21c-a91b-4bcd-b82b-a7ec1f1a35d7)
 
