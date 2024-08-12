@@ -42,6 +42,11 @@
     border: none;
 }
 
+.toSourceButton:hover,
+.backButton:hover {
+    background-color: lightgreen;
+}
+
 .toSource,
 .backLink {
     text-decoration: none;

@@ -1,0 +1,43 @@
+{
+  "articles": [
+  {
+      "source": {
+          "id": "wired",
+          "name": "Wired"
+      },
+      "author": "Brenda Stolyar",
+      "title": "The Top 5 Prime Day Apple Deals on Our Favorite Gadgets (2024)",
+      "description": "From MacBooks and iPads to AirPods and Apple Watches, here are our favorite Prime Day Apple deals.",
+      "url": "https://www.wired.com/story/best-apple-amazon-prime-day-deals-2024/",
+      "urlToImage": "https://media.wired.com/photos/6692961613d53a481e12152e/191:100/w_1280,c_limit/DEALS-ON-APPLE.png",
+      "publishedAt": "2024-07-16T09:49:06Z",
+      "content": "apple isn't known for holding sales, which is why it's important to take advantage of any discounts through third-party retailers. In this case, it's Amazon. This year's Prime Day Apple deals include… [+5481 chars]"
+  },
+  {
+      "source": {
+          "id": "wired",
+          "name": "Wired"
+      },
+      "author": "Brenda Stolyar",
+      "title": "The Top 9 Prime Day Apple Deals on Our Favorite Gadgets (2024)",
+      "description": "From MacBooks and iPads to AirPods and Apple Watches, here are our favorite Prime Day Apple deals.",
+      "url": "https://www.wired.com/story/best-apple-amazon-prime-day-deals-2024-1/",
+      "urlToImage": "https://media.wired.com/photos/6692961613d53a481e12152e/191:100/w_1280,c_limit/DEALS-ON-APPLE.png",
+      "publishedAt": "2024-07-17T15:23:25Z",
+      "content": "apple isn't known for holding sales, which is why it's important to take advantage of any discounts through third-party retailers. In this case, it's Amazon. This year's Prime Day Apple deals include… [+8379 chars]"
+  },
+  {
+      "source": {
+          "id": "Yahoo Entertainment",
+          "name": "Yahoo Entertainment"
+      },
+      "author": "Amy Skorheim",
+      "title": "Amazon Prime Day Apple deals on AirPods, MacBooks, iPads and more that are still available today",
+      "description": "Prime Day might be over, but there are a (somewhat surprising) number of Apple deals still live right now. Apple itself doesn’t typically host sales, but we often see deals from Amazon on current-generation Apple devices — most of which will get even better t…",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_78c45b7d-d46d-42e1-ba45-479f78d3fd3c",
+      "urlToImage": "https://media.wired.com/photos/6692961613d53a481e12152e/191:100/w_1280,c_limit/DEALS-ON-APPLE.png",
+      "publishedAt": "2024-07-18T13:04:05Z",
+      "content": "If you click 'Accept all', we and our partners, including 236 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use … [+678 chars]"
+  }
+    ]
+  }
