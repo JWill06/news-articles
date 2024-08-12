@@ -1,6 +1,10 @@
 .navWrapper {
     display: flex;
     justify-content: center;
+    background-image: url('../Images/appleLogo.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     padding: 5px;
 }
 

@@ -46,7 +46,7 @@ const ArticleDetails = () => {
             <h3 className='singleDate'><strong>Published:</strong> {moment(article.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</h3>
             <button className='toSourceButton'>
             <a href={article.url} className='toSource' target='_blank' rel='noopener noreferrer'>
-            To Source
+            Main Article Source
           </a>
             </button>
         </div>
