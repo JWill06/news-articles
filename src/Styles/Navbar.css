@@ -1,7 +1,6 @@
 .navWrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     padding: 5px;
 }
 
@@ -12,21 +11,8 @@
 }
 
 .navWrapper h1 {
-    animation: fromLeft 5s linear forwards;
-}
-
-.navWrapper h2,
-.navWrapper h3 {
     animation: fromRight 5s linear forwards;
-}
-
-.navWrapper h2 {
-    font-size: 35px;
-}
-
-.navWrapper h1,
-.navWrapper h3 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 @keyframes fromLeft {
