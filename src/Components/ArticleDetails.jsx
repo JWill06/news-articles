@@ -27,7 +27,7 @@ const ArticleDetails = () => {
     }, [title])
 
     if (loading) {
-        return <p className='loadingText'>Loading...</p>;
+        return <p className='loadingText'>..loading</p>;
       }
     
       if (error) {
